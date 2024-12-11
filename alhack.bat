@@ -58,16 +58,17 @@ echo github: https://github.com/Sp33dy36
 echo.
 echo Version: 3            CTRL+C: exit          Author: 4lbH4cker
 echo.
-echo [1] Requirements and Update    echo [2] Phishing Tool
-echo [3] WebCam Hack                  echo [4] User Find
-echo [5] Gmail Bomber                echo [6] DDOS Attack
-echo [7] How to use?                 echo [8] Uninstall downloaded programs
-echo [9] IP Info                     echo [10] dorks-eye
-echo [11] ghost_eye                  echo [12] RED_HAWK
-echo [13] VirusCrafter               echo [14] Info-Site
-echo [15] BadMod                     echo [16] Facebash
-echo [17] DARKARMY                   echo [18] N-ANOM
+echo [1] Requirements and Update    [2] Phishing Tool
+echo [3] WebCam Hack                  [4] User Find
+echo [5] Gmail Bomber                [6] DDOS Attack
+echo [7] How to use?                 [8] Uninstall downloaded programs
+echo [9] IP Info                     [10] dorks-eye
+echo [11] ghost_eye                  [12] RED_HAWK
+echo [13] VirusCrafter               [14] Info-Site
+echo [15] BadMod                     [16] Facebash
+echo [17] DARKARMY                   [18] N-ANOM
 echo.
+
 
 :: Choice selection
 set /p islem="Enter the option number: "
@@ -275,5 +276,7 @@ if "%islem%"=="18" (
     ./install.sh
 )
 
+:: End
+pause
 :: End
 pause
