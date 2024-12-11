@@ -1,3 +1,7 @@
+Remade for use in Windows. (:
+
+
+
 Author: 4lbH4cker
 ### Version 3
 (![image](https://raw.githubusercontent.com/4lbH4cker/ALHacking/main/alhacking.png)
@@ -11,17 +15,12 @@ Tools to help you with ethical hacking, Social media hack, phone info, Gmail att
 # Operating System Requirements
 works on any of the following operating systems:
 
-• Android (Using the Termux App)
-
-• Linux (Debian Based Systems)
-
-• Unix
+• Windows
 
 # How to Install
-* Open the terminal and type `<pkg install git>`
-* Then`<git clone https://github.com/4lbH4cker/ALHacking>`
-* `<cd ALHacking>`
-* `<bash alhack.sh>`
+* Save as Alhack.bat
+* Then run with Administrator Privileges
+
 
 
 # Warning
