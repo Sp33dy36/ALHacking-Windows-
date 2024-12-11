@@ -1,227 +1,285 @@
-clear
-mkdir Tools
-clear 
-echo -e '\033[31;40;1m 
-  █████╗ ██╗             ████████╗ ██████╗  ██████╗ ██╗
- ██╔══██╗██║             ╚══██╔══╝██╔═══██╗██╔═══██╗██║
- ███████║██║     ███████╗   ██║   ██║   ██║██║   ██║██║
- ██╔══██║██║     ╚══════╝   ██║   ██║   ██║██║   ██║██║
- ██║  ██║███████╗           ██║   ╚██████╔╝╚██████╔╝███████╗
- ╚═╝  ╚═╝╚══════╝           ╚═╝    ╚═════╝  ╚═════╝ ╚══════╝ v3
-  Coded by 4lbH4cker
-  github: https://github.com/4lbH4cker
-\033[33;4mVersion:\033[0m 3            \033[33;4mCTRL+C:\033[0m exit          \033[33;4mAuthor:\033[0m 4lbH4cker
+@echo off
+cls
 
-\e[37m[1]\e[36m Kërkesat & Përditësimi        \e[37m[2]\e[36m Phishing Tool				
-\e[37m[3]\e[36m WebCam Hack                   \e[37m[4]\e[36m User Find					
-\e[37m[5]\e[36m Gmail Bomber		  \e[37m[6]\e[36m DDOS Attack			
-\e[37m[7]\e[36m Si të përdorni ?	          \e[37m[8]\e[36m Çinstaloni programet e shkarkuara		
-\e[37m[9]\e[36m Ip Info	                  \e[37m[10]\e[36m dorks-eye
-\e[37m[11]\e[36m ghost_eye                    \e[37m[12]\e[36m RED_HAWK
-\e[37m[13]\e[36m VirusCrafter                 \e[37m[14]\e[36m Info-Site
-\e[37m[15]\e[36m BadMod	                  \e[37m[16]\e[36m Facebash
-\e[37m[17]\e[36m DARKARMY                     \e[37m[18]\e[36m N-ANOM
-'
+:: Check if Chocolatey is installed
+choco -v >nul 2>nul
+if %errorlevel% neq 0 (
+    echo Chocolatey is not installed. Installing Chocolatey...
+    @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))"
+)
 
+:: Check if Git is installed
+git --version >nul 2>nul
+if %errorlevel% neq 0 (
+    echo Git is not installed. Installing Git...
+    choco install git -y
+)
 
-#Zgjedhja e Opsionit
+:: Check if Python is installed
+python --version >nul 2>nul
+if %errorlevel% neq 0 (
+    echo Python is not installed. Installing Python...
+    choco install python -y
+)
 
+:: Check if pip is installed
+pip --version >nul 2>nul
+if %errorlevel% neq 0 (
+    echo pip is not installed. Installing pip...
+    python -m ensurepip --upgrade
+)
 
-read -p "Numri i transaksionit: " islem
-if [[ $islem == 1 || $islem == 01 ]]; then
-clear
+:: Check if curl is installed
+curl --version >nul 2>nul
+if %errorlevel% neq 0 (
+    echo curl is not installed. Installing curl...
+    choco install curl -y
+)
 
-echo -e "\033[47;31;5m Po instalon përditësimin dhe kërkesat...\033[0m"
-sleep 5
-pkg install git -y
-pkg install python python2 -y
-pkg install pip pip2 -y
-pkg install curl -y
-apt update
-apt upgrade -y
-clear
-echo -e "\033[47;3;35m Përditësimi i plotë...\033[0m"
-sleep 3
-bash tga.sh
+:: Check if pip3 is installed (for Python 3)
+pip3 --version >nul 2>nul
+if %errorlevel% neq 0 (
+    echo pip3 is not installed. Installing pip3...
+    python3 -m ensurepip --upgrade
+)
 
-elif [[ $islem == 2 || $islem == 02 ]]; then
-clear
-echo -e "\033[47;3;35m Instalimi mund të marrë pak kohe\033[0m"
-sleep 3
-cd Tools
-git clone https://github.com/htr-tech/zphisher
-cd zphisher
-bash zphisher.sh
+cls
+echo.
+echo ██████╗ ██╗             ████████╗ ██████╗  ██████╗ ██╗
+echo ██╔══██╗██║             ╚══██╔══╝██╔═══██╗██╔═══██╗██║
+echo ███████║██║     ███████╗   ██║   ██║   ██║██║   ██║██║
+echo ██╔══██║██║     ╚══════╝   ██║   ██║   ██║██║   ██║██║
+echo ██║  ██║███████╗           ██║   ╚██████╔╝╚██████╔╝███████╗
+echo ╚═╝  ╚═╝╚══════╝           ╚═╝    ╚═════╝  ╚═════╝ ╚══════╝ v3
+echo Coded by 4lbH4cker
+echo github: https://github.com/4lbH4cker
+echo.
+echo Version: 3            CTRL+C: exit          Author: 4lbH4cker
+echo.
+echo [1] Requirements & Update        [2] Phishing Tool
+echo [3] WebCam Hack                   [4] User Find
+echo [5] Gmail Bomber                 [6] DDOS Attack
+echo [7] How to use?                  [8] Uninstall downloaded programs
+echo [9] IP Info                       [10] dorks-eye
+echo [11] ghost_eye                   [12] RED_HAWK
+echo [13] VirusCrafter                [14] Info-Site
+echo [15] BadMod                       [16] Facebash
+echo [17] DARKARMY                     [18] N-ANOM
+echo.
 
-elif [[ $islem == 3 || $islem == 03 ]]; then
-clear
-echo -e "\033[47;3;35m Instalimi mund të marrë pak kohe\033[0m"
-sleep 3
-cd Tools
-git clone https://github.com/techchipnet/CamPhish
-cd CamPhish
-bash camphish.sh
+:: Choice selection
+set /p islem="Enter the option number: "
 
-elif [[ $islem == 4 || $islem == 04 ]]; then
-clear
-echo -e "\033[47;3;35m Instalimi mund të marrë pak kohe\033[0m"
-sleep 3
-cd Tools
-git clone https://github.com/xHak9x/finduser
-cd finduser
-bash finduser.sh
-       
-elif [[ $islem == 5 || $islem == 05 ]]; then
-clear
-echo -e "\033[47;3;35m Instalimi mund të marrë pak kohe\033[0m"
-sleep 3
-cd Tools
-git clone https://github.com/palahsu/MBomb.git
-cd MBomb
-python MBomb.py
+if "%islem%"=="1" (
+    cls
+    echo Installing requirements and updates...
+    sleep 5
+    choco install git -y
+    choco install python -y
+    choco install curl -y
+    python -m pip install --upgrade pip
+    cls
+    echo Update complete...
+    sleep 3
+    call tga.bat
+)
 
-elif [[ $islem == 6 || $islem == 06 ]]; then
-clear
-echo -e "\033[47;3;35m Instalimi mund të marrë pak kohe\033[0m"
-sleep 3
-cd Tools
-pip3 install requests pysocks
-git clone https://github.com/Leeon123/CC-attack
-cd CC-attack
-python3 cc.py
+if "%islem%"=="2" (
+    cls
+    echo Installing phishing tool (this may take some time)...
+    sleep 3
+    mkdir Tools\zphisher
+    cd Tools\zphisher
+    git clone https://github.com/htr-tech/zphisher
+    cd zphisher
+    bash zphisher.sh
+)
 
-elif [[ $islem == 7 || $islem == 07 ]]; then
-clear
-xdg-open https://pasteio.com/xuCvIkXdNRIB
-bash tga.sh
+if "%islem%"=="3" (
+    cls
+    echo Installing webcam hack tool...
+    sleep 3
+    mkdir Tools\CamPhish
+    cd Tools\CamPhish
+    git clone https://github.com/techchipnet/CamPhish
+    cd CamPhish
+    bash camphish.sh
+)
 
- 
-elif [[ $islem == 8 ]]; then
-        clear
+if "%islem%"=="4" (
+    cls
+    echo Installing user find tool...
+    sleep 3
+    mkdir Tools\finduser
+    cd Tools\finduser
+    git clone https://github.com/xHak9x/finduser
+    cd finduser
+    bash finduser.sh
+)
 
-echo -e "\033[47;3;35m PO HIQEN PROGRAMET E SHKARKUARA...\033[0m"
-sleep 3 
-rm -rf Tools
+if "%islem%"=="5" (
+    cls
+    echo Installing Gmail bomber...
+    sleep 3
+    mkdir Tools\MBomb
+    cd Tools\MBomb
+    git clone https://github.com/palahsu/MBomb.git
+    cd MBomb
+    python MBomb.py
+)
 
-bash tga.sh
+if "%islem%"=="6" (
+    cls
+    echo Installing DDOS attack tool...
+    sleep 3
+    mkdir Tools\CC-attack
+    cd Tools\CC-attack
+    python -m pip install requests pysocks
+    git clone https://github.com/Leeon123/CC-attack
+    cd CC-attack
+    python3 cc.py
+)
 
-elif [[ $islem == 9 || $islem == 09 ]]; then
-clear
-echo -e "\033[47;3;35m Instalimi mund të marrë pak kohe\033[0m"
-sleep 3
-cd Tools
-git clone https://github.com/ahgaurel1/ipinfo
-cd ipinfo
-bash install.sh
-python3 ipinfo.py
+if "%islem%"=="7" (
+    cls
+    start https://pasteio.com/xuCvIkXdNRIB
+    call tga.bat
+)
 
-elif [[ $islem == 10 || $islem == 010 ]]; then
-clear
-echo -e "\033[47;3;35m Instalimi mund të marrë pak kohe\033[0m"
-sleep 3
-cd Tools
-git clone https://github.com/BullsEye0/dorks-eye.git
-cd dorks-eye
-pip install -r requirements.txt
-python3 dorks-eye.py
+if "%islem%"=="8" (
+    cls
+    echo Uninstalling downloaded programs...
+    sleep 3
+    rmdir /s /q Tools
+    call tga.bat
+)
 
-elif [[ $islem == 11 || $islem == 011 ]]; then
-clear
-echo -e "\033[47;3;35m Instalimi mund të marrë pak kohe\033[0m"
-sleep 3
-cd Tools
-git clone https://github.com/BullsEye0/ghost_eye.git
-cd ghost_eye
-pip install -r requirements.txt
-python3 ghost_eye.py
+if "%islem%"=="9" (
+    cls
+    echo Installing IP info tool...
+    sleep 3
+    mkdir Tools\ipinfo
+    cd Tools\ipinfo
+    git clone https://github.com/ahgaurel1/ipinfo
+    cd ipinfo
+    bash install.sh
+    python3 ipinfo.py
+)
 
-elif [[ $islem == 12 || $islem == 012 ]]; then
-clear
-echo -e "\033[47;3;35m Instalimi mund të marrë pak kohe\033[0m"
-sleep 3
-cd Tools
-git clone https://github.com/Tuhinshubhra/RED_HAWK
-cd RED_HAWK
-php rhawk.php
+if "%islem%"=="10" (
+    cls
+    echo Installing dorks-eye tool...
+    sleep 3
+    mkdir Tools\dorks-eye
+    cd Tools\dorks-eye
+    git clone https://github.com/BullsEye0/dorks-eye.git
+    cd dorks-eye
+    pip install -r requirements.txt
+    python3 dorks-eye.py
+)
 
-elif [[ $islem == 13 || $islem == 013 ]]; then
-clear
-echo -e "\033[47;3;35m Instalimi mund të marrë pak kohe\033[0m"
-sleep 3
-cd Tools
-git clone https://github.com/Devil-Tigers/TigerVirus
-apt update
-apt upgrade -y
-pkg install git -y
-cd TigerVirus
-bash TigerVirus.sh
+if "%islem%"=="11" (
+    cls
+    echo Installing ghost_eye tool...
+    sleep 3
+    mkdir Tools\ghost_eye
+    cd Tools\ghost_eye
+    git clone https://github.com/BullsEye0/ghost_eye.git
+    cd ghost_eye
+    pip install -r requirements.txt
+    python3 ghost_eye.py
+)
 
-elif [[ $islem == 14 || $islem == 014 ]]; then
-clear
-echo -e "\033[47;3;35m Instalimi mund të marrë pak kohe\033[0m"
-sleep 3
-cd Tools
-pkg install curl -y
-upgrade -y
-pkg install git -y
-git clone https://github.com/king-hacking/info-site.git
-cd info-site
-bash info.sh
+if "%islem%"=="12" (
+    cls
+    echo Installing RED_HAWK tool...
+    sleep 3
+    mkdir Tools\RED_HAWK
+    cd Tools\RED_HAWK
+    git clone https://github.com/Tuhinshubhra/RED_HAWK
+    cd RED_HAWK
+    php rhawk.php
+)
 
-elif [[ $islem == 15 || $islem == 015 ]]; then
-clear
-echo -e "\033[47;3;35m Instalimi mund të marrë pak kohe\033[0m"
-sleep 3
-cd Tools
-sudo apt-get update
-sudo apt-get install php
-sudo apt-get install php-curl
-git clone https://github.com/MrSqar-Ye/BadMod.git
-cd BadMod
-chmod u+x INSTALL
-chmod u+x BadMod.php
-sudo php BadMod.php
+if "%islem%"=="13" (
+    cls
+    echo Installing VirusCrafter...
+    sleep 3
+    mkdir Tools\TigerVirus
+    cd Tools\TigerVirus
+    git clone https://github.com/Devil-Tigers/TigerVirus
+    cd TigerVirus
+    bash TigerVirus.sh
+)
 
-elif [[ $islem == 16 || $islem == 016 ]]; then
-clear
-echo -e "\033[47;3;35m Instalimi mund të marrë pak kohe\033[0m"
-sleep 3
-cd Tools
-git clone https://github.com/fu8uk1/facebash
-cd facebash
-chmod +x facebash.sh
-service tor start
-sudo ./facebash.sh
+if "%islem%"=="14" (
+    cls
+    echo Installing Info-Site tool...
+    sleep 3
+    mkdir Tools\info-site
+    cd Tools\info-site
+    git clone https://github.com/king-hacking/info-site.git
+    cd info-site
+    bash info.sh
+)
 
-elif [[ $islem == 17 || $islem == 017 ]]; then
-clear
-echo -e "\033[47;3;35m Instalimi mund të marrë pak kohe\033[0m"
-sleep 3
-cd Tools
-pkg install git
-pkg install python2
-git clone https://github.com/D4RK-4RMY/DARKARMY
-cd DARKARMY
-chmod +x darkarmy.py
-python2 darkarmy.py
+if "%islem%"=="15" (
+    cls
+    echo Installing BadMod tool...
+    sleep 3
+    mkdir Tools\BadMod
+    cd Tools\BadMod
+    git clone https://github.com/MrSqar-Ye/BadMod.git
+    cd BadMod
+    chmod u+x INSTALL
+    chmod u+x BadMod.php
+    sudo php BadMod.php
+)
 
-elif [[ $islem == 18 || $islem == 018 ]]; then
-clear
-echo -e "\033[47;3;35m Instalimi mund të marrë pak kohe\033[0m"
-sleep 3
-cd Tools
-apt update && apt upgrade 
-pkg install git -y
-pkg install python && pkg install python3 -y
-git clone https://github.com/Nabil-Official/N-ANOM
-pip3 install requests
-cd N-ANOM 
-python3 n-anom.py
+if "%islem%"=="16" (
+    cls
+    echo Installing Facebash tool...
+    sleep 3
+    mkdir Tools\facebash
+    cd Tools\facebash
+    git clone https://github.com/fu8uk1/facebash
+    cd facebash
+    chmod +x facebash.sh
+    service tor start
+    sudo ./facebash.sh
+)
 
-else   
-	clear
-        echo -e '\033[36;40;1m Keni futur kodin e gabuar'	
-	sleep 1
-	clear 
-	bash tga.sh
-fi
+if "%islem%"=="17" (
+    cls
+    echo Installing DARKARMY tool...
+    sleep 3
+    mkdir Tools\DARKARMY
+    cd Tools\DARKARMY
+    git clone https://github.com/D4RK-4RMY/DARKARMY
+    cd DARKARMY
+    chmod +x darkarmy.py
+    python2 darkarmy.py
+)
+
+if "%islem%"=="18" (
+    cls
+    echo Installing N-ANOM tool...
+    sleep 3
+    mkdir Tools\N-ANOM
+    cd Tools\N-ANOM
+    git clone https://github.com/Nabil-Official/N-ANOM
+    pip3 install requests
+    cd N-ANOM
+    python3 n-anom.py
+)
+
+:: If invalid option is entered
+if not "%islem%"=="1" if not "%islem%"=="2" if not "%islem%"=="3" if not "%islem%"=="4" if not "%islem%"=="5" if not "%islem%"=="6" if not "%islem%"=="7" if not "%islem%"=="8" if not "%islem%"=="9" if not "%islem%"=="10" if not "%islem%"=="11" if not "%islem%"=="12" if not "%islem%"=="13" if not "%islem%"=="14" if not "%islem%"=="15" if not "%islem%"=="16" if not "%islem%"=="17" if not "%islem%"=="18" (
+    cls
+    echo You entered an invalid option.
+    sleep 1
+    cls
+    call tga.bat
+)
+
+exit
