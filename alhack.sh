@@ -1,4 +1,5 @@
 @echo off
+chcp 65001
 cls
 
 :: Check if Chocolatey is installed
@@ -51,20 +52,21 @@ echo ███████║██║     ███████╗   ██║ 
 echo ██╔══██║██║     ╚══════╝   ██║   ██║   ██║██║   ██║██║
 echo ██║  ██║███████╗           ██║   ╚██████╔╝╚██████╔╝███████╗
 echo ╚═╝  ╚═╝╚══════╝           ╚═╝    ╚═════╝  ╚═════╝ ╚══════╝ v3
-echo Coded by 4lbH4cker
+echo Coded by 4lbH4cker    Updated by Sp33dy36
 echo github: https://github.com/4lbH4cker
+echo github: https://github.com/Sp33dy36
 echo.
 echo Version: 3            CTRL+C: exit          Author: 4lbH4cker
 echo.
-echo [1] Requirements & Update        [2] Phishing Tool
-echo [3] WebCam Hack                   [4] User Find
-echo [5] Gmail Bomber                 [6] DDOS Attack
-echo [7] How to use?                  [8] Uninstall downloaded programs
-echo [9] IP Info                       [10] dorks-eye
-echo [11] ghost_eye                   [12] RED_HAWK
-echo [13] VirusCrafter                [14] Info-Site
-echo [15] BadMod                       [16] Facebash
-echo [17] DARKARMY                     [18] N-ANOM
+echo [1] Requirements and Update    echo [2] Phishing Tool
+echo [3] WebCam Hack                  echo [4] User Find
+echo [5] Gmail Bomber                echo [6] DDOS Attack
+echo [7] How to use?                 echo [8] Uninstall downloaded programs
+echo [9] IP Info                     echo [10] dorks-eye
+echo [11] ghost_eye                  echo [12] RED_HAWK
+echo [13] VirusCrafter               echo [14] Info-Site
+echo [15] BadMod                     echo [16] Facebash
+echo [17] DARKARMY                   echo [18] N-ANOM
 echo.
 
 :: Choice selection
@@ -73,21 +75,21 @@ set /p islem="Enter the option number: "
 if "%islem%"=="1" (
     cls
     echo Installing requirements and updates...
-    sleep 5
+    timeout /t 3 /nobreak
     choco install git -y
     choco install python -y
     choco install curl -y
     python -m pip install --upgrade pip
     cls
     echo Update complete...
-    sleep 3
+    timeout /t 3 /nobreak
     call tga.bat
 )
 
 if "%islem%"=="2" (
     cls
     echo Installing phishing tool (this may take some time)...
-    sleep 3
+    timeout /t 3 /nobreak
     mkdir Tools\zphisher
     cd Tools\zphisher
     git clone https://github.com/htr-tech/zphisher
@@ -98,7 +100,7 @@ if "%islem%"=="2" (
 if "%islem%"=="3" (
     cls
     echo Installing webcam hack tool...
-    sleep 3
+    timeout /t 3 /nobreak
     mkdir Tools\CamPhish
     cd Tools\CamPhish
     git clone https://github.com/techchipnet/CamPhish
@@ -109,7 +111,7 @@ if "%islem%"=="3" (
 if "%islem%"=="4" (
     cls
     echo Installing user find tool...
-    sleep 3
+    timeout /t 3 /nobreak
     mkdir Tools\finduser
     cd Tools\finduser
     git clone https://github.com/xHak9x/finduser
@@ -120,7 +122,7 @@ if "%islem%"=="4" (
 if "%islem%"=="5" (
     cls
     echo Installing Gmail bomber...
-    sleep 3
+    timeout /t 3 /nobreak
     mkdir Tools\MBomb
     cd Tools\MBomb
     git clone https://github.com/palahsu/MBomb.git
@@ -131,7 +133,7 @@ if "%islem%"=="5" (
 if "%islem%"=="6" (
     cls
     echo Installing DDOS attack tool...
-    sleep 3
+    timeout /t 3 /nobreak
     mkdir Tools\CC-attack
     cd Tools\CC-attack
     python -m pip install requests pysocks
@@ -149,7 +151,7 @@ if "%islem%"=="7" (
 if "%islem%"=="8" (
     cls
     echo Uninstalling downloaded programs...
-    sleep 3
+    timeout /t 3 /nobreak
     rmdir /s /q Tools
     call tga.bat
 )
@@ -157,7 +159,7 @@ if "%islem%"=="8" (
 if "%islem%"=="9" (
     cls
     echo Installing IP info tool...
-    sleep 3
+    timeout /t 3 /nobreak
     mkdir Tools\ipinfo
     cd Tools\ipinfo
     git clone https://github.com/ahgaurel1/ipinfo
@@ -169,7 +171,7 @@ if "%islem%"=="9" (
 if "%islem%"=="10" (
     cls
     echo Installing dorks-eye tool...
-    sleep 3
+    timeout /t 3 /nobreak
     mkdir Tools\dorks-eye
     cd Tools\dorks-eye
     git clone https://github.com/BullsEye0/dorks-eye.git
@@ -181,7 +183,7 @@ if "%islem%"=="10" (
 if "%islem%"=="11" (
     cls
     echo Installing ghost_eye tool...
-    sleep 3
+    timeout /t 3 /nobreak
     mkdir Tools\ghost_eye
     cd Tools\ghost_eye
     git clone https://github.com/BullsEye0/ghost_eye.git
@@ -193,7 +195,7 @@ if "%islem%"=="11" (
 if "%islem%"=="12" (
     cls
     echo Installing RED_HAWK tool...
-    sleep 3
+    timeout /t 3 /nobreak
     mkdir Tools\RED_HAWK
     cd Tools\RED_HAWK
     git clone https://github.com/Tuhinshubhra/RED_HAWK
@@ -204,7 +206,7 @@ if "%islem%"=="12" (
 if "%islem%"=="13" (
     cls
     echo Installing VirusCrafter...
-    sleep 3
+    timeout /t 3 /nobreak
     mkdir Tools\TigerVirus
     cd Tools\TigerVirus
     git clone https://github.com/Devil-Tigers/TigerVirus
@@ -215,7 +217,7 @@ if "%islem%"=="13" (
 if "%islem%"=="14" (
     cls
     echo Installing Info-Site tool...
-    sleep 3
+    timeout /t 3 /nobreak
     mkdir Tools\info-site
     cd Tools\info-site
     git clone https://github.com/king-hacking/info-site.git
@@ -226,7 +228,7 @@ if "%islem%"=="14" (
 if "%islem%"=="15" (
     cls
     echo Installing BadMod tool...
-    sleep 3
+    timeout /t 3 /nobreak
     mkdir Tools\BadMod
     cd Tools\BadMod
     git clone https://github.com/MrSqar-Ye/BadMod.git
@@ -239,7 +241,7 @@ if "%islem%"=="15" (
 if "%islem%"=="16" (
     cls
     echo Installing Facebash tool...
-    sleep 3
+    timeout /t 3 /nobreak
     mkdir Tools\facebash
     cd Tools\facebash
     git clone https://github.com/fu8uk1/facebash
@@ -252,34 +254,26 @@ if "%islem%"=="16" (
 if "%islem%"=="17" (
     cls
     echo Installing DARKARMY tool...
-    sleep 3
+    timeout /t 3 /nobreak
     mkdir Tools\DARKARMY
     cd Tools\DARKARMY
     git clone https://github.com/D4RK-4RMY/DARKARMY
     cd DARKARMY
     chmod +x darkarmy.py
-    python2 darkarmy.py
+    python3 darkarmy.py
 )
 
 if "%islem%"=="18" (
     cls
     echo Installing N-ANOM tool...
-    sleep 3
+    timeout /t 3 /nobreak
     mkdir Tools\N-ANOM
     cd Tools\N-ANOM
-    git clone https://github.com/Nabil-Official/N-ANOM
-    pip3 install requests
+    git clone https://github.com/N-anom/N-ANOM.git
     cd N-ANOM
-    python3 n-anom.py
+    chmod +x *
+    ./install.sh
 )
 
-:: If invalid option is entered
-if not "%islem%"=="1" if not "%islem%"=="2" if not "%islem%"=="3" if not "%islem%"=="4" if not "%islem%"=="5" if not "%islem%"=="6" if not "%islem%"=="7" if not "%islem%"=="8" if not "%islem%"=="9" if not "%islem%"=="10" if not "%islem%"=="11" if not "%islem%"=="12" if not "%islem%"=="13" if not "%islem%"=="14" if not "%islem%"=="15" if not "%islem%"=="16" if not "%islem%"=="17" if not "%islem%"=="18" (
-    cls
-    echo You entered an invalid option.
-    sleep 1
-    cls
-    call tga.bat
-)
-
-exit
+:: End
+pause
